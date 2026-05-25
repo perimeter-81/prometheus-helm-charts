@@ -12,7 +12,7 @@ jobs:
       packages: write # needed for ghcr access
       id-token: write # needed for keyless signing
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.ACTIONS_RUNNER }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
